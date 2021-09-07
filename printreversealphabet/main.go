@@ -5,9 +5,8 @@ import (
 )
 
 func main() {
-	alphabet := "abcdefghijklmnopqrstuvwxyz"
-	for i := 25; i > len(alphabet); i++ {
-		z01.PrintRune(rune(alphabet[i]))
+	for i := 'z'; i > 96; i-- {
+		z01.PrintRune(i)
 	}
 
 	z01.PrintRune('\n')
