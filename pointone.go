@@ -1,5 +1,5 @@
-package main
+package piscine
 
-func PointOne(*int) int {
-	*b = *b + 1
+func PointOne(n *int) {
+	*n = *n + 1
 }
