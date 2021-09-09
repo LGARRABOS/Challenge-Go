@@ -1,9 +1,10 @@
 package piscine
 
-func BasicAtoi(s string) int {
+func BasicAtoi2(s string) int {
 	o := 0
 	c := 0
-	for _, word := range s {
+	nb_word := []rune(s)
+	for _, word := range nb_word {
 		for i := '0'; i < word; i++ {
 			c++
 		}
