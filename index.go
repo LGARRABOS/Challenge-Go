@@ -9,6 +9,8 @@ func Index(s string, toFind string) int {
 			if a == z[0] {
 				w = q
 				break
+			} else if q == len(s)-1 {
+				return -1
 			}
 		}
 	}
