@@ -3,7 +3,7 @@ package piscine
 func IsPrintable(s string) bool {
 	i := []rune(s)
 	for a := 0; a < len(s); a++ {
-		if i[a] >= 'a' && i[a] <= 'z' || i[a] >= 'A' && i[a] <= 'Z' || i[a] >= '0' && i[a] <= '9' {
+		if i[a] >= 32 && i[a] <= 126 {
 		} else {
 			return false
 		}
