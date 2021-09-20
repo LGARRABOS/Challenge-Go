@@ -8,7 +8,7 @@ import (
 
 func main() {
 	i := os.Args
-	for x := 0; x < 100000000; x++ {
+	for x := 0; x < len(i); x++ {
 		for w := 2; w < len(i); w++ {
 			if i[w] < i[w-1] {
 				c := i[w]
