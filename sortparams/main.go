@@ -8,14 +8,12 @@ import (
 
 func main() {
 	i := os.Args
-	for x := 0; x < 1000; x++ {
-		for w := 1; w < len(i); w++ {
-			if i[0] < i[w-1] {
+	for x := 0; x < 100000000; x++ {
+		for w := 2; w < len(i); w++ {
+			if i[w] < i[w-1] {
 				c := i[w]
 				i[w] = i[w-1]
 				i[w-1] = c
-			} else {
-				continue
 			}
 		}
 	}
