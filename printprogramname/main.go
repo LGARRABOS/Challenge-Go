@@ -7,12 +7,11 @@ import (
 )
 
 func main() {
-	a := os.Args[0]
-	z := []rune(a)
-	for i := 0; i < len(a); i++ {
-		if z[i] == '.' || z[i] == '/' {
-		} else {
-			z01.PrintRune(z[i])
+	for i, r := range os.Args[0] {
+		if i == 0 || i == 1 && (os.Args[0][i]) == 46 || (os.Args[0][i]) == 47 {
+			continue
 		}
+		z01.PrintRune(r)
 	}
+	z01.PrintRune('\n')
 }
