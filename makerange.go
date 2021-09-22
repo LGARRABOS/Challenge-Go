@@ -5,6 +5,7 @@ func MakeRange(min, max int) []int {
 	v := make([]int, min)
 	if max <= min {
 		v = make([]int, 0)
+		v = nil
 	} else {
 		for i := 0; i < g; i++ {
 			v[i] = i + min
