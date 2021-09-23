@@ -6,5 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces("Hello how are you?"))
+	s := "HelloHAhowHAareHAyou?"
+	fmt.Printf("%#v\n", piscine.Split(s, "HA"))
 }
