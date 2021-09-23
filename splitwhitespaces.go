@@ -6,7 +6,7 @@ func SplitWhiteSpaces(s string) []string {
 	w := []rune(s)
 	for i := 0; i < len(s); i++ {
 		if w[i] == 32 || w[i] == '\n' || w[i] == 9 {
-			if w[i+1] == 32 {
+			if w[i+1] == 32 || w[i+1] == '\n' || w[i+1] == 9 {
 			} else {
 				g = append(g, m)
 				m = ""
