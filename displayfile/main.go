@@ -1,30 +1,24 @@
 package main
 
 import (
+	"fmt"
 	"os"
-
-	"github.com/01-edu/z01"
 )
 
 func main() {
 	a := os.Args
 	if len(a) == 1 {
 		missing := "File name missing"
-		for i := 0; i < len(missing); i++ {
-			z01.PrintRune(rune(missing[i]))
-		}
+		fmt.Println(missing)
 	} else {
 		err := os.Open
 		if err != nil {
 			g := "Too many arguments!!"
-			for i := 0; i < len(g); i++ {
-				z01.PrintRune(rune(g[i]))
-			}
+			fmt.Println(g)
+
 		} else {
 			w := "Almost there!!"
-			for i := 0; i < len(w); i++ {
-				z01.PrintRune(rune(w[i]))
-			}
+			fmt.Println(w)
 
 		}
 
