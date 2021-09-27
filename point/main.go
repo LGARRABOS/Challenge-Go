@@ -28,6 +28,7 @@ func main() {
 	z01.PrintRune(rune('y'))
 	z01.PrintRune(rune(' '))
 	z01.PrintRune(rune('='))
+	z01.PrintRune(rune(' '))
 	for i := 0; i < len(points.y); i++ {
 		z01.PrintRune(rune(points.y[i]))
 	}
