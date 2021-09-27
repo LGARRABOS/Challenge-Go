@@ -31,6 +31,6 @@ func main() {
 	for i := 0; i < len(points.y); i++ {
 		z01.PrintRune(rune(points.y[i]))
 	}
+	z01.PrintRune(rune('\n'))
 
-	//	fmt.Printf("x = %d, y = %d\n", points.x, points.y)
 }
