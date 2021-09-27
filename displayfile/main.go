@@ -13,13 +13,12 @@ func main() {
 	} else {
 		err := os.Open
 		if err != nil {
-			g := "Too many arguments!!"
-			fmt.Println(g)
-
-		} else {
 			w := "Almost there!!"
 			fmt.Println(w)
 
+		} else {
+			g := "Too many arguments!!"
+			fmt.Println(g)
 		}
 
 	}
