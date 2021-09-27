@@ -17,7 +17,7 @@ func main() {
 			fmt.Println(g)
 
 		} else {
-			w := make([]byte, 34)
+			w := make([]byte, 14)
 			file.Read(w)
 			fmt.Println(string(w))
 		}
