@@ -22,7 +22,7 @@ func even(nbr int) int {
 }
 
 func isEven(nbr int) bool {
-	if even(nbr) == 1 {
+	if even(nbr) == 0 {
 		return true
 	} else {
 		return false
