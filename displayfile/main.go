@@ -18,8 +18,6 @@ func main() {
 		} else {
 			w := "Almost there!!"
 			fmt.Println(w)
-
 		}
-
 	}
 }
