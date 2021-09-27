@@ -20,6 +20,7 @@ func main() {
 			w := make([]byte, 14)
 			file.Read(w)
 			fmt.Println(string(w))
+			file.Close()
 		}
 	}
 }
