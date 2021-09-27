@@ -11,14 +11,15 @@ func main() {
 		missing := "File name missing"
 		fmt.Println(missing)
 	} else {
-		err := os.Open
-		if err == nil {
+		file, err := os.Open("quest8.txt")
+		if err != nil {
 			g := "Too many arguments!!"
 			fmt.Println(g)
 
 		} else {
-			w := "Almost there!!"
-			fmt.Println(w)
+			w := make([]byte, 34)
+			file.Read(w)
+			fmt.Println(string(w))
 		}
 	}
 }
