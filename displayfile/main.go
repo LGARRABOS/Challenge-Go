@@ -12,7 +12,7 @@ func main() {
 		fmt.Println(missing)
 	} else {
 		file, _ := os.Open("quest8.txt")
-		if len(os.Args) < 2 {
+		if len(os.Args) > 2 {
 			g := "Too many arguments!!"
 			fmt.Println(g)
 
