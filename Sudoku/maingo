@@ -1,0 +1,107 @@
+package main
+
+import (
+    "os"
+
+    "github.com/01-edu/z01"
+)
+
+var Erreur = false
+
+const taille = 9
+
+var grille [taille][taille]int
+
+func resgrille() bool {
+    var Case [2]int
+    Case = trouvide()
+    l := Case[0]
+    c := Case[1]
+    for i := 1; i <= taille; i++ {
+        if verif(l, c, i) {
+            grille[l][c] = i
+        }
+        return true
+    }
+    grille[l][c] = 0
+    return false
+}
+
+func trouvide() [2]int {
+    for i := 0; i < taille; i++ {
+        for j := 0; j < taille; j++ {
+            if grille[i][j] == 0 {
+                var casevide [2]int
+                casevide[0] = i
+                casevide[1] = j
+                return casevide
+            }
+        }
+    }
+    var tab [2]int
+    tab[0] = -1
+    tab[1] = -1
+    return tab
+}
+
+func verif(l, c, chiffre int) bool {
+    for i := 0; i < taille; i++ {
+        if grille[i][c] == chiffre {
+            return false
+        }
+        if grille[l][i] == chiffre {
+            return false
+        }
+    }
+    return true
+}
+
+func affich() {
+    for k := 0; k < taille; k++ {
+        for l := 0; l < taille; l++ {
+            if grille[k][l] == 0 {
+
+                errorr()
+                return
+            }
+        }
+    }
+    for i := 0; i < taille; i++ {
+        for j := 0; j < taille; j++ {
+            if j != taille-1 {
+                z01.PrintRune(rune(grille[i][j] + 48))
+                z01.PrintRune(' ')
+            } else {
+                z01.PrintRune(rune(grille[i][j] + 48))
+            }
+        }
+        z01.PrintRune('\n')
+    }
+}
+
+func errorr() {
+    z01.PrintRune('E')
+    z01.PrintRune('r')
+    z01.PrintRune('r')
+    z01.PrintRune('o')
+    z01.PrintRune('r')
+    z01.PrintRune('\n')
+    return
+}
+
+func main() {
+    args := os.Args
+    if len(args)-1 != taille {
+
+        errorr()
+        return
+    }
+    for i := 1; i < len(args); i++ {
+        if len(args[i]) != taille {
+            errorr()
+            return
+        }
+    }
+    resgrille()
+    affich()
+}
