@@ -74,7 +74,7 @@ func affich() {
             } else {
                 z01.PrintRune(rune(grille[i][j] + 48))
             }
-        }
+        }&
         z01.PrintRune('\n')
     }
 }
