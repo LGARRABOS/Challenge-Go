@@ -8,5 +8,5 @@ func Any(f func(string) bool, a []string) bool {
 			return true
 		}
 	}
-	return false
+	return true
 }
