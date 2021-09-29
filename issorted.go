@@ -2,14 +2,14 @@ package piscine
 
 func IsSorted(f func(a, b int) int, a []int) bool {
 	j := 0
-	for i := 0; i < len(a); i++ {
+	for i := 0; i < len(a)-1; i++ {
 		if i < i+1 {
 			j = j + 1
 		} else {
 			break
 		}
 	}
-	if j == len(a) {
+	if j == len(a)-1 {
 		return true
 	} else {
 		return false
